@@ -1,0 +1,128 @@
+//
+//  GameListView.swift
+//  Playpedia
+//
+//  Created by Ferdiansyah Annora on 12/10/26.
+//
+
+#if os(iOS)
+import PlaypediaDomain
+import PlaypediaUI
+import PlaypediaDetailFeature
+import PlaypediaFavoritesState
+import SwiftUI
+
+public struct GameListView: View {
+    @State private var viewModel: GameListViewModel
+    private let service: any GameService
+
+    public init(service: any GameService) {
+        self.service = service
+        _viewModel = State(initialValue: GameListViewModel(service: service))
+    }
+
+    public var body: some View {
+        ZStack {
+            AppBackground()
+            ScrollView {
+                VStack(alignment: .leading, spacing: 24) {
+                    orderPicker
+                    gameList
+                }
+                .padding(20)
+                .frame(maxWidth: 680)
+                .frame(maxWidth: .infinity)
+            }
+            .refreshable { viewModel.loadGames() }
+        }
+        .navigationTitle("Playpedia")
+        .navigationBarTitleDisplayMode(.inline)
+        .searchable(text: $viewModel.searchText, prompt: "Search games")
+        .onAppear { viewModel.loadGames() }
+        .navigationDestination(for: Game.self) { game in
+            GameDetailView(game: game, service: service)
+        }
+    }
+
+    private var orderPicker: some View {
+        HStack {
+            Text(viewModel.searchText.isEmpty ? "Games" : "Search results")
+                .font(.title3.weight(.medium))
+                .foregroundStyle(Color.textPrimary)
+            Spacer()
+            Menu {
+                Picker("Sort games", selection: $viewModel.order) {
+                    ForEach(GameOrder.allCases) { order in
+                        Text(order.title).tag(order)
+                    }
+                }
+            } label: {
+                HStack(spacing: 6) {
+                    Text(viewModel.order.title)
+                    Image(systemName: "chevron.down")
+                }
+                .font(.subheadline)
+                .foregroundStyle(Color.textPrimary)
+                .padding(12)
+                .background(Color.cardBackground, in: Capsule())
+                .overlay {
+                    Capsule().strokeBorder(Color.textSecondary.opacity(0.25))
+                }
+            }
+            .accessibilityLabel("Sort by: \(viewModel.order.title)")
+        }
+    }
+
+    @ViewBuilder
+    private var gameList: some View {
+        if viewModel.isLoading {
+            ProgressView("Loading games…")
+                .tint(Color.accent)
+                .foregroundStyle(Color.textSecondary)
+                .frame(maxWidth: .infinity, minHeight: 240)
+        } else if viewModel.games.isEmpty, let error = viewModel.errorMessage {
+            StateView(symbol: "wifi.exclamationmark", title: "Unable to load games", message: error) {
+                viewModel.loadGames()
+            }
+        } else if viewModel.games.isEmpty {
+            StateView(
+                symbol: "magnifyingglass",
+                title: "No games found",
+                message: "Try another title or a shorter search term."
+            )
+        } else {
+            LazyVStack(spacing: 18) {
+                ForEach(viewModel.games) { game in
+                    NavigationLink(value: game) {
+                        GameCard(game: game)
+                    }
+                    .buttonStyle(.plain)
+                    .onAppear {
+                        viewModel.loadMoreIfNeeded(after: game)
+                    }
+                }
+                if let error = viewModel.errorMessage {
+                    VStack(spacing: 12) {
+                        Text(error)
+                            .font(.caption)
+                            .foregroundStyle(Color.textSecondary)
+                        Button("Try again") {
+                            viewModel.loadNextPage()
+                        }
+                        .font(.subheadline)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 16)
+                } else if viewModel.hasNextPage {
+                    ProgressView()
+                        .accessibilityLabel("Loading more games")
+                        .tint(Color.accent)
+                        .foregroundStyle(Color.textSecondary)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 16)
+                }
+            }
+        }
+    }
+}
+#endif

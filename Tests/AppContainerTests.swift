@@ -7,11 +7,10 @@
 
 import XCTest
 import Combine
-#if SWIFT_PACKAGE
-@testable import PlaypediaCore
-#else
-@testable import Playpedia
-#endif
+@testable import PlaypediaComposition
+@testable import PlaypediaFavoritesState
+@testable import PlaypediaDomain
+@testable import PlaypediaData
 
 @MainActor
 final class AppContainerTests: XCTestCase {

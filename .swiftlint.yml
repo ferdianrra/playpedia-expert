@@ -1,7 +1,11 @@
 included:
   - Playpedia
+  - Modules
+  - Tests
 excluded:
   - Playpedia/Assets.xcassets
+  - Modules/PlaypediaUI/Sources/PlaypediaUI/Resources
+  - Modules/PlaypediaAboutFeature/Sources/PlaypediaAboutFeature/Resources
 line_length:
   warning: 120
   error: 160

@@ -7,11 +7,8 @@
 
 import XCTest
 import Combine
-#if SWIFT_PACKAGE
-@testable import PlaypediaCore
-#else
-@testable import Playpedia
-#endif
+@testable import PlaypediaData
+@testable import PlaypediaDomain
 
 final class FavoriteRepositoryTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()

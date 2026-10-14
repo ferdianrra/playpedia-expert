@@ -8,11 +8,8 @@
 import XCTest
 import Combine
 import Alamofire
-#if SWIFT_PACKAGE
-@testable import PlaypediaCore
-#else
-@testable import Playpedia
-#endif
+@testable import PlaypediaData
+@testable import PlaypediaDomain
 
 final class NetworkServiceTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()
@@ -130,8 +127,8 @@ private final class NetworkURLProtocol: URLProtocol, @unchecked Sendable {
     static var handler: ((URLRequest) throws -> (Int, Data)?)?
     static var onStop: (() -> Void)?
 
-    override class func canInit(with request: URLRequest) -> Bool { true }
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest { request }
+    override static func canInit(with request: URLRequest) -> Bool { true }
+    override static func canonicalRequest(for request: URLRequest) -> URLRequest { request }
 
     override func startLoading() {
         do {

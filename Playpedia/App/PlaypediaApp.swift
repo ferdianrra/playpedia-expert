@@ -5,6 +5,7 @@
 //  Created by Ferdiansyah Annora on 12/10/26.
 //
 
+import PlaypediaComposition
 import SwiftUI
 
 @main

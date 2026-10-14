@@ -7,9 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A13000000000000000000001 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A13000000000000000000003 /* Alamofire */; };
-		A13000000000000000000002 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A13000000000000000000004 /* Swinject */; };
-		A14000000000000000000001 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A13000000000000000000003 /* Alamofire */; };
+		A14000000000000000000001 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A13000000000000000000003 /* AlamofireDynamic */; };
+		A15200000000000000000064 /* PlaypediaDomain in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000001 /* PlaypediaDomain */; };
+		A15200000000000000000065 /* PlaypediaUI in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000003 /* PlaypediaUI */; };
+		A15200000000000000000066 /* PlaypediaFavoritesState in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000004 /* PlaypediaFavoritesState */; };
+		A15200000000000000000067 /* PlaypediaHomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000005 /* PlaypediaHomeFeature */; };
+		A15200000000000000000068 /* PlaypediaDetailFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000006 /* PlaypediaDetailFeature */; };
+		A15200000000000000000069 /* PlaypediaFavoritesFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000007 /* PlaypediaFavoritesFeature */; };
+		A1520000000000000000006A /* PlaypediaAboutFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000008 /* PlaypediaAboutFeature */; };
+		A1520000000000000000006B /* PlaypediaComposition in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000009 /* PlaypediaComposition */; };
+		A152000000000000000000C8 /* PlaypediaDomain in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000001 /* PlaypediaDomain */; };
+		A152000000000000000000C9 /* PlaypediaData in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000002 /* PlaypediaData */; };
+		A152000000000000000000CA /* PlaypediaHomeFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000005 /* PlaypediaHomeFeature */; };
+		A152000000000000000000CB /* PlaypediaDetailFeature in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000006 /* PlaypediaDetailFeature */; };
+		A152000000000000000000CC /* PlaypediaFavoritesState in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000004 /* PlaypediaFavoritesState */; };
+		A152000000000000000000CD /* PlaypediaComposition in Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000009 /* PlaypediaComposition */; };
+		A15400000000000000000001 /* PlaypediaDomain in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000001 /* PlaypediaDomain */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000002 /* PlaypediaUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000003 /* PlaypediaUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000003 /* PlaypediaFavoritesState in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000004 /* PlaypediaFavoritesState */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000004 /* PlaypediaHomeFeature in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000005 /* PlaypediaHomeFeature */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000005 /* PlaypediaDetailFeature in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000006 /* PlaypediaDetailFeature */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000006 /* PlaypediaFavoritesFeature in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000007 /* PlaypediaFavoritesFeature */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000007 /* PlaypediaAboutFeature in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000008 /* PlaypediaAboutFeature */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A15400000000000000000008 /* PlaypediaComposition in Embed Frameworks */ = {isa = PBXBuildFile; productRef = A15100000000000000000009 /* PlaypediaComposition */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,9 +42,63 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A15500000000000000000001 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = Frameworks;
+			files = (
+				A15400000000000000000001 /* PlaypediaDomain in Embed Frameworks */,
+				A15400000000000000000002 /* PlaypediaUI in Embed Frameworks */,
+				A15400000000000000000003 /* PlaypediaFavoritesState in Embed Frameworks */,
+				A15400000000000000000004 /* PlaypediaHomeFeature in Embed Frameworks */,
+				A15400000000000000000005 /* PlaypediaDetailFeature in Embed Frameworks */,
+				A15400000000000000000006 /* PlaypediaFavoritesFeature in Embed Frameworks */,
+				A15400000000000000000007 /* PlaypediaAboutFeature in Embed Frameworks */,
+				A15400000000000000000008 /* PlaypediaComposition in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A12000000000000000000001 /* Configuration/App.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/App.xcconfig; sourceTree = "<group>"; };
 		A14000000000000000000002 /* PlaypediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = PlaypediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16200000000000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A16200000000000000000006 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		A16200000000000000000007 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A1620000000000000000000B /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		A1620000000000000000000C /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		A1620000000000000000000D /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A16200000000000000000012 /* CoreDataFavoriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataFavoriteRepository.swift; sourceTree = "<group>"; };
+		A16200000000000000000014 /* GameDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDTO.swift; sourceTree = "<group>"; };
+		A16200000000000000000015 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		A16200000000000000000016 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A16200000000000000000018 /* RemoteGameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGameRepository.swift; sourceTree = "<group>"; };
+		A16200000000000000000019 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A1620000000000000000001D /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
+		A1620000000000000000001E /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
+		A1620000000000000000001F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A16200000000000000000023 /* FavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
+		A16200000000000000000024 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A16200000000000000000025 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		A16200000000000000000026 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A16200000000000000000027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A1620000000000000000002B /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		A1620000000000000000002C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A16200000000000000000030 /* FavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStore.swift; sourceTree = "<group>"; };
+		A16200000000000000000031 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A16200000000000000000035 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
+		A16200000000000000000036 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		A16200000000000000000037 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		A1620000000000000000003C /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A1620000000000000000003D /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
+		A1620000000000000000003E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		A1620000000000000000003F /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
+		A16200000000000000000040 /* GameImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImage.swift; sourceTree = "<group>"; };
+		A16200000000000000000041 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		A16200000000000000000042 /* ThemeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
+		A16200000000000000000043 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		D6879669307B4796004D1F9F /* Playpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Playpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -45,23 +119,334 @@
 		A14000000000000000000004 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				A14000000000000000000001 /* Alamofire in Frameworks */,
+				A14000000000000000000001 /* AlamofireDynamic in Frameworks */,
+				A152000000000000000000C8 /* PlaypediaDomain in Frameworks */,
+				A152000000000000000000C9 /* PlaypediaData in Frameworks */,
+				A152000000000000000000CA /* PlaypediaHomeFeature in Frameworks */,
+				A152000000000000000000CB /* PlaypediaDetailFeature in Frameworks */,
+				A152000000000000000000CC /* PlaypediaFavoritesState in Frameworks */,
+				A152000000000000000000CD /* PlaypediaComposition in Frameworks */,
 			);
 		};
 		D6879666307B4796004D1F9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
-				A13000000000000000000001 /* Alamofire in Frameworks */,
-				A13000000000000000000002 /* Swinject in Frameworks */,
+				A15200000000000000000064 /* PlaypediaDomain in Frameworks */,
+				A15200000000000000000065 /* PlaypediaUI in Frameworks */,
+				A15200000000000000000066 /* PlaypediaFavoritesState in Frameworks */,
+				A15200000000000000000067 /* PlaypediaHomeFeature in Frameworks */,
+				A15200000000000000000068 /* PlaypediaDetailFeature in Frameworks */,
+				A15200000000000000000069 /* PlaypediaFavoritesFeature in Frameworks */,
+				A1520000000000000000006A /* PlaypediaAboutFeature in Frameworks */,
+				A1520000000000000000006B /* PlaypediaComposition in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16100000000000000000001 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000001 /* PlaypediaAboutFeature */,
+				A16200000000000000000008 /* PlaypediaComposition */,
+				A1620000000000000000000E /* PlaypediaData */,
+				A1620000000000000000001A /* PlaypediaDetailFeature */,
+				A16200000000000000000020 /* PlaypediaDomain */,
+				A16200000000000000000028 /* PlaypediaFavoritesFeature */,
+				A1620000000000000000002D /* PlaypediaFavoritesState */,
+				A16200000000000000000032 /* PlaypediaHomeFeature */,
+				A16200000000000000000038 /* PlaypediaUI */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000001 /* PlaypediaAboutFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000002 /* Sources */,
+				A16200000000000000000007 /* Package.swift */,
+			);
+			path = PlaypediaAboutFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000003 /* PlaypediaAboutFeature */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000003 /* PlaypediaAboutFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000004 /* Resources */,
+				A16200000000000000000006 /* AboutView.swift */,
+			);
+			path = PlaypediaAboutFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000004 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000005 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000008 /* PlaypediaComposition */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000009 /* Sources */,
+				A1620000000000000000000D /* Package.swift */,
+			);
+			path = PlaypediaComposition;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000009 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000000A /* PlaypediaComposition */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000000A /* PlaypediaComposition */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000000B /* AppConfiguration.swift */,
+				A1620000000000000000000C /* AppContainer.swift */,
+			);
+			path = PlaypediaComposition;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000000E /* PlaypediaData */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000000F /* Sources */,
+				A16200000000000000000019 /* Package.swift */,
+			);
+			path = PlaypediaData;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000000F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000010 /* PlaypediaData */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000010 /* PlaypediaData */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000011 /* Local */,
+				A16200000000000000000013 /* Remote */,
+				A16200000000000000000017 /* Repository */,
+			);
+			path = PlaypediaData;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000011 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000012 /* CoreDataFavoriteRepository.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000013 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000014 /* GameDTO.swift */,
+				A16200000000000000000015 /* NetworkError.swift */,
+				A16200000000000000000016 /* NetworkService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000017 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000018 /* RemoteGameRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000001A /* PlaypediaDetailFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000001B /* Sources */,
+				A1620000000000000000001F /* Package.swift */,
+			);
+			path = PlaypediaDetailFeature;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000001B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000001C /* PlaypediaDetailFeature */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000001C /* PlaypediaDetailFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000001D /* GameDetailView.swift */,
+				A1620000000000000000001E /* GameDetailViewModel.swift */,
+			);
+			path = PlaypediaDetailFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000020 /* PlaypediaDomain */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000021 /* Sources */,
+				A16200000000000000000026 /* Package.swift */,
+				A16200000000000000000027 /* README.md */,
+			);
+			path = PlaypediaDomain;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000021 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000022 /* PlaypediaDomain */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000022 /* PlaypediaDomain */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000023 /* FavoriteUseCase.swift */,
+				A16200000000000000000024 /* Game.swift */,
+				A16200000000000000000025 /* GameService.swift */,
+			);
+			path = PlaypediaDomain;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000028 /* PlaypediaFavoritesFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000029 /* Sources */,
+				A1620000000000000000002C /* Package.swift */,
+			);
+			path = PlaypediaFavoritesFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000029 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000002A /* PlaypediaFavoritesFeature */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000002A /* PlaypediaFavoritesFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000002B /* FavoriteView.swift */,
+			);
+			path = PlaypediaFavoritesFeature;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000002D /* PlaypediaFavoritesState */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000002E /* Sources */,
+				A16200000000000000000031 /* Package.swift */,
+			);
+			path = PlaypediaFavoritesState;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000002E /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000002F /* PlaypediaFavoritesState */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000002F /* PlaypediaFavoritesState */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000030 /* FavoriteStore.swift */,
+			);
+			path = PlaypediaFavoritesState;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000032 /* PlaypediaHomeFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000033 /* Sources */,
+				A16200000000000000000037 /* Package.swift */,
+			);
+			path = PlaypediaHomeFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000033 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000034 /* PlaypediaHomeFeature */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000034 /* PlaypediaHomeFeature */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000035 /* GameListView.swift */,
+				A16200000000000000000036 /* GameListViewModel.swift */,
+			);
+			path = PlaypediaHomeFeature;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000038 /* PlaypediaUI */ = {
+			isa = PBXGroup;
+			children = (
+				A16200000000000000000039 /* Sources */,
+				A16200000000000000000043 /* Package.swift */,
+			);
+			path = PlaypediaUI;
+			sourceTree = "<group>";
+		};
+		A16200000000000000000039 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000003A /* PlaypediaUI */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000003A /* PlaypediaUI */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000003B /* Resources */,
+				A1620000000000000000003D /* AppBackground.swift */,
+				A1620000000000000000003E /* ErrorMessage.swift */,
+				A1620000000000000000003F /* GameCard.swift */,
+				A16200000000000000000040 /* GameImage.swift */,
+				A16200000000000000000041 /* StateView.swift */,
+				A16200000000000000000042 /* ThemeColors.swift */,
+			);
+			path = PlaypediaUI;
+			sourceTree = "<group>";
+		};
+		A1620000000000000000003B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1620000000000000000003C /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D6879660307B4796004D1F9F = {
 			isa = PBXGroup;
 			children = (
 				D687966B307B4796004D1F9F /* Playpedia */,
+				A16100000000000000000001 /* Modules */,
 				A14000000000000000000003 /* Tests */,
 				A12000000000000000000001 /* Configuration/App.xcconfig */,
 				D687966A307B4796004D1F9F /* Products */,
@@ -98,7 +483,13 @@
 			);
 			name = PlaypediaTests;
 			packageProductDependencies = (
-				A13000000000000000000003 /* Alamofire */,
+				A13000000000000000000003 /* AlamofireDynamic */,
+				A15100000000000000000001 /* PlaypediaDomain */,
+				A15100000000000000000002 /* PlaypediaData */,
+				A15100000000000000000005 /* PlaypediaHomeFeature */,
+				A15100000000000000000006 /* PlaypediaDetailFeature */,
+				A15100000000000000000004 /* PlaypediaFavoritesState */,
+				A15100000000000000000009 /* PlaypediaComposition */,
 			);
 			productName = PlaypediaTests;
 			productReference = A14000000000000000000002 /* PlaypediaTests.xctest */;
@@ -112,6 +503,7 @@
 				D6879666307B4796004D1F9F /* Frameworks */,
 				D6879667307B4796004D1F9F /* Resources */,
 				A11000000000000000000001 /* SwiftLint */,
+				A15500000000000000000001 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,8 +512,14 @@
 			);
 			name = Playpedia;
 			packageProductDependencies = (
-				A13000000000000000000003 /* Alamofire */,
-				A13000000000000000000004 /* Swinject */,
+				A15100000000000000000001 /* PlaypediaDomain */,
+				A15100000000000000000003 /* PlaypediaUI */,
+				A15100000000000000000004 /* PlaypediaFavoritesState */,
+				A15100000000000000000005 /* PlaypediaHomeFeature */,
+				A15100000000000000000006 /* PlaypediaDetailFeature */,
+				A15100000000000000000007 /* PlaypediaFavoritesFeature */,
+				A15100000000000000000008 /* PlaypediaAboutFeature */,
+				A15100000000000000000009 /* PlaypediaComposition */,
 			);
 			productName = Playpedia;
 			productReference = D6879669307B4796004D1F9F /* Playpedia.app */;
@@ -153,7 +551,15 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A13000000000000000000005 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				A13000000000000000000006 /* XCRemoteSwiftPackageReference "Swinject" */,
+				A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */,
+				A15300000000000000000001 /* XCLocalSwiftPackageReference "Modules/PlaypediaData" */,
+				A15300000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaUI" */,
+				A15300000000000000000003 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesState" */,
+				A15300000000000000000004 /* XCLocalSwiftPackageReference "Modules/PlaypediaHomeFeature" */,
+				A15300000000000000000005 /* XCLocalSwiftPackageReference "Modules/PlaypediaDetailFeature" */,
+				A15300000000000000000006 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesFeature" */,
+				A15300000000000000000007 /* XCLocalSwiftPackageReference "Modules/PlaypediaAboutFeature" */,
+				A15300000000000000000008 /* XCLocalSwiftPackageReference "Modules/PlaypediaComposition" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D687966A307B4796004D1F9F /* Products */;
@@ -388,7 +794,6 @@
 			baseConfigurationReference = A12000000000000000000001 /* Configuration/App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SFYM6B225;
@@ -422,7 +827,6 @@
 			baseConfigurationReference = A12000000000000000000001 /* Configuration/App.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SFYM6B225;
@@ -480,6 +884,45 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaDomain;
+		};
+		A15300000000000000000001 /* XCLocalSwiftPackageReference "Modules/PlaypediaData" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaData;
+		};
+		A15300000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaUI;
+		};
+		A15300000000000000000003 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesState" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaFavoritesState;
+		};
+		A15300000000000000000004 /* XCLocalSwiftPackageReference "Modules/PlaypediaHomeFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaHomeFeature;
+		};
+		A15300000000000000000005 /* XCLocalSwiftPackageReference "Modules/PlaypediaDetailFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaDetailFeature;
+		};
+		A15300000000000000000006 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaFavoritesFeature;
+		};
+		A15300000000000000000007 /* XCLocalSwiftPackageReference "Modules/PlaypediaAboutFeature" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaAboutFeature;
+		};
+		A15300000000000000000008 /* XCLocalSwiftPackageReference "Modules/PlaypediaComposition" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Modules/PlaypediaComposition;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		A13000000000000000000005 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -489,26 +932,58 @@
 				version = 5.12.2;
 			};
 		};
-		A13000000000000000000006 /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject.git";
-			requirement = {
-				kind = exactVersion;
-				version = 2.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A13000000000000000000003 /* Alamofire */ = {
+		A13000000000000000000003 /* AlamofireDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A13000000000000000000005 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			productName = AlamofireDynamic;
 		};
-		A13000000000000000000004 /* Swinject */ = {
+		A15100000000000000000001 /* PlaypediaDomain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A13000000000000000000006 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
+			package = A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */;
+			productName = PlaypediaDomain;
+		};
+		A15100000000000000000002 /* PlaypediaData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000001 /* XCLocalSwiftPackageReference "Modules/PlaypediaData" */;
+			productName = PlaypediaData;
+		};
+		A15100000000000000000003 /* PlaypediaUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaUI" */;
+			productName = PlaypediaUI;
+		};
+		A15100000000000000000004 /* PlaypediaFavoritesState */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000003 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesState" */;
+			productName = PlaypediaFavoritesState;
+		};
+		A15100000000000000000005 /* PlaypediaHomeFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000004 /* XCLocalSwiftPackageReference "Modules/PlaypediaHomeFeature" */;
+			productName = PlaypediaHomeFeature;
+		};
+		A15100000000000000000006 /* PlaypediaDetailFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000005 /* XCLocalSwiftPackageReference "Modules/PlaypediaDetailFeature" */;
+			productName = PlaypediaDetailFeature;
+		};
+		A15100000000000000000007 /* PlaypediaFavoritesFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000006 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesFeature" */;
+			productName = PlaypediaFavoritesFeature;
+		};
+		A15100000000000000000008 /* PlaypediaAboutFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000007 /* XCLocalSwiftPackageReference "Modules/PlaypediaAboutFeature" */;
+			productName = PlaypediaAboutFeature;
+		};
+		A15100000000000000000009 /* PlaypediaComposition */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A15300000000000000000008 /* XCLocalSwiftPackageReference "Modules/PlaypediaComposition" */;
+			productName = PlaypediaComposition;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -3,26 +3,32 @@
 //  Package.swift
 //  Playpedia
 //
-//  Created by Ferdiansyah Annora on 12/10/26.
+//  Created by Ferdiansyah Annora on 14/10/26.
 //
 
 import PackageDescription
 
 let package = Package(
-    name: "PlaypediaCore",
-    platforms: [.macOS(.v14), .iOS(.v17)],
-    products: [.library(name: "PlaypediaCore", targets: ["PlaypediaCore"])],
+    name: "PlaypediaModules",
+    platforms: [.iOS(.v17), .macOS(.v14)],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.12.2"),
-        .package(url: "https://github.com/Swinject/Swinject.git", exact: "2.9.1")
+        .package(path: "Modules/PlaypediaDomain"),
+        .package(path: "Modules/PlaypediaData"),
+        .package(path: "Modules/PlaypediaFavoritesState"),
+        .package(path: "Modules/PlaypediaHomeFeature"),
+        .package(path: "Modules/PlaypediaDetailFeature"),
+        .package(path: "Modules/PlaypediaComposition"),
+        .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.12.2")
     ],
     targets: [
-        .target(name: "PlaypediaCore", dependencies: [
-                    .product(name: "Alamofire", package: "Alamofire"),
-                    .product(name: "Swinject", package: "Swinject")
-                ], path: "Playpedia",
-                exclude: ["App/PlaypediaApp.swift", "View", "Assets.xcassets", "Preview"],
-                sources: ["Domain", "Data", "ViewModel", "App/AppContainer.swift", "App/AppConfiguration.swift"]),
-        .testTarget(name: "PlaypediaCoreTests", dependencies: ["PlaypediaCore"], path: "Tests")
+        .testTarget(name: "PlaypediaModulesTests", dependencies: [
+            .product(name: "PlaypediaDomain", package: "PlaypediaDomain"),
+            .product(name: "PlaypediaData", package: "PlaypediaData"),
+            .product(name: "PlaypediaHomeFeature", package: "PlaypediaHomeFeature"),
+            .product(name: "PlaypediaDetailFeature", package: "PlaypediaDetailFeature"),
+            .product(name: "PlaypediaFavoritesState", package: "PlaypediaFavoritesState"),
+            .product(name: "PlaypediaComposition", package: "PlaypediaComposition"),
+            .product(name: "AlamofireDynamic", package: "Alamofire")
+        ], path: "Tests")
     ]
 )

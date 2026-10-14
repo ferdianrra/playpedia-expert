@@ -5,6 +5,12 @@
 //  Created by Ferdiansyah Annora on 12/10/26.
 //
 
+import PlaypediaDomain
+import PlaypediaFavoritesState
+import PlaypediaUI
+import PlaypediaHomeFeature
+import PlaypediaFavoritesFeature
+import PlaypediaAboutFeature
 import SwiftUI
 
 struct ContentView: View {

@@ -7,11 +7,8 @@
 
 import XCTest
 import Combine
-#if SWIFT_PACKAGE
-@testable import PlaypediaCore
-#else
-@testable import Playpedia
-#endif
+@testable import PlaypediaDetailFeature
+@testable import PlaypediaDomain
 
 @MainActor
 final class GameDetailViewModelTests: XCTestCase {

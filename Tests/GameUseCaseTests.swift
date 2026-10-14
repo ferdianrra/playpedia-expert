@@ -7,11 +7,7 @@
 
 import XCTest
 import Combine
-#if SWIFT_PACKAGE
-@testable import PlaypediaCore
-#else
-@testable import Playpedia
-#endif
+@testable import PlaypediaDomain
 
 final class GameUseCaseTests: XCTestCase {
     private var subscriptions = Set<AnyCancellable>()

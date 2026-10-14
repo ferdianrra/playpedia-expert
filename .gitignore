@@ -7,3 +7,4 @@ xcuserdata/
 Configuration/Secrets.xcconfig
 test-results/
 artifacts/
+.swiftpm/
