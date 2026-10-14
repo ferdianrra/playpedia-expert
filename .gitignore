@@ -1,0 +1,7 @@
+# Playpedia — file lokal dan hasil build
+.DS_Store
+.build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+Configuration/Secrets.xcconfig
