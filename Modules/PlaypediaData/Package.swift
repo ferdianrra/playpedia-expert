@@ -13,12 +13,15 @@ let package = Package(
     platforms: [.iOS(.v17), .macOS(.v14)],
     products: [.library(name: "PlaypediaData", type: .dynamic, targets: ["PlaypediaData"])],
     dependencies: [
-        .package(path: "../PlaypediaDomain"),
+        .package(
+            url: "https://github.com/ferdianrra/playpedia-domain.git",
+            revision: "e2d0be81278e9ba61cc58e8247d43981d63e0fea"
+        ),
         .package(url: "https://github.com/Alamofire/Alamofire.git", exact: "5.12.2")
     ],
     targets: [
         .target(name: "PlaypediaData", dependencies: [
-            .product(name: "PlaypediaDomain", package: "PlaypediaDomain"),
+            .product(name: "PlaypediaDomain", package: "playpedia-domain"),
             .product(name: "AlamofireDynamic", package: "Alamofire")
         ])
     ]

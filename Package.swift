@@ -12,7 +12,10 @@ let package = Package(
     name: "PlaypediaModules",
     platforms: [.iOS(.v17), .macOS(.v14)],
     dependencies: [
-        .package(path: "Modules/PlaypediaDomain"),
+        .package(
+            url: "https://github.com/ferdianrra/playpedia-domain.git",
+            revision: "e2d0be81278e9ba61cc58e8247d43981d63e0fea"
+        ),
         .package(path: "Modules/PlaypediaData"),
         .package(path: "Modules/PlaypediaFavoritesState"),
         .package(path: "Modules/PlaypediaHomeFeature"),
@@ -22,7 +25,7 @@ let package = Package(
     ],
     targets: [
         .testTarget(name: "PlaypediaModulesTests", dependencies: [
-            .product(name: "PlaypediaDomain", package: "PlaypediaDomain"),
+            .product(name: "PlaypediaDomain", package: "playpedia-domain"),
             .product(name: "PlaypediaData", package: "PlaypediaData"),
             .product(name: "PlaypediaHomeFeature", package: "PlaypediaHomeFeature"),
             .product(name: "PlaypediaDetailFeature", package: "PlaypediaDetailFeature"),

@@ -1,5 +1,5 @@
 {
-  "originHash" : "2b639b04525b8fb0c65947a9b6144d14e0e5b0fbea80dd7b092b4b266ef0ff90",
+  "originHash" : "06d283a31953f8c86866e394d281232cd8714e3e236bec09e649b3ee4256fdf6",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,6 +8,14 @@
       "state" : {
         "revision" : "bda9ed57d72988a3a2ada33d824583541f86eac6",
         "version" : "5.12.2"
+      }
+    },
+    {
+      "identity" : "playpedia-domain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ferdianrra/playpedia-domain.git",
+      "state" : {
+        "revision" : "e2d0be81278e9ba61cc58e8247d43981d63e0fea"
       }
     },
     {

@@ -79,11 +79,6 @@
 		A1620000000000000000001D /* GameDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailView.swift; sourceTree = "<group>"; };
 		A1620000000000000000001E /* GameDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewModel.swift; sourceTree = "<group>"; };
 		A1620000000000000000001F /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		A16200000000000000000023 /* FavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteUseCase.swift; sourceTree = "<group>"; };
-		A16200000000000000000024 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		A16200000000000000000025 /* GameService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
-		A16200000000000000000026 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		A16200000000000000000027 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A1620000000000000000002B /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		A1620000000000000000002C /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		A16200000000000000000030 /* FavoriteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteStore.swift; sourceTree = "<group>"; };
@@ -151,7 +146,6 @@
 				A16200000000000000000008 /* PlaypediaComposition */,
 				A1620000000000000000000E /* PlaypediaData */,
 				A1620000000000000000001A /* PlaypediaDetailFeature */,
-				A16200000000000000000020 /* PlaypediaDomain */,
 				A16200000000000000000028 /* PlaypediaFavoritesFeature */,
 				A1620000000000000000002D /* PlaypediaFavoritesState */,
 				A16200000000000000000032 /* PlaypediaHomeFeature */,
@@ -297,34 +291,6 @@
 				A1620000000000000000001E /* GameDetailViewModel.swift */,
 			);
 			path = PlaypediaDetailFeature;
-			sourceTree = "<group>";
-		};
-		A16200000000000000000020 /* PlaypediaDomain */ = {
-			isa = PBXGroup;
-			children = (
-				A16200000000000000000021 /* Sources */,
-				A16200000000000000000026 /* Package.swift */,
-				A16200000000000000000027 /* README.md */,
-			);
-			path = PlaypediaDomain;
-			sourceTree = "<group>";
-		};
-		A16200000000000000000021 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				A16200000000000000000022 /* PlaypediaDomain */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		A16200000000000000000022 /* PlaypediaDomain */ = {
-			isa = PBXGroup;
-			children = (
-				A16200000000000000000023 /* FavoriteUseCase.swift */,
-				A16200000000000000000024 /* Game.swift */,
-				A16200000000000000000025 /* GameService.swift */,
-			);
-			path = PlaypediaDomain;
 			sourceTree = "<group>";
 		};
 		A16200000000000000000028 /* PlaypediaFavoritesFeature */ = {
@@ -551,7 +517,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				A13000000000000000000005 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */,
+				A15000000000000000000002 /* XCRemoteSwiftPackageReference "playpedia-domain" */,
 				A15300000000000000000001 /* XCLocalSwiftPackageReference "Modules/PlaypediaData" */,
 				A15300000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaUI" */,
 				A15300000000000000000003 /* XCLocalSwiftPackageReference "Modules/PlaypediaFavoritesState" */,
@@ -885,10 +851,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = Modules/PlaypediaDomain;
-		};
 		A15300000000000000000001 /* XCLocalSwiftPackageReference "Modules/PlaypediaData" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Modules/PlaypediaData;
@@ -924,6 +886,14 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A15000000000000000000002 /* XCRemoteSwiftPackageReference "playpedia-domain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ferdianrra/playpedia-domain.git";
+			requirement = {
+				kind = revision;
+				revision = e2d0be81278e9ba61cc58e8247d43981d63e0fea;
+			};
+		};
 		A13000000000000000000005 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -942,7 +912,7 @@
 		};
 		A15100000000000000000001 /* PlaypediaDomain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A15000000000000000000002 /* XCLocalSwiftPackageReference "Modules/PlaypediaDomain" */;
+			package = A15000000000000000000002 /* XCRemoteSwiftPackageReference "playpedia-domain" */;
 			productName = PlaypediaDomain;
 		};
 		A15100000000000000000002 /* PlaypediaData */ = {

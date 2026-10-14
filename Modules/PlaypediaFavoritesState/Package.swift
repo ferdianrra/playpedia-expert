@@ -13,11 +13,14 @@ let package = Package(
     platforms: [.iOS(.v17), .macOS(.v14)],
     products: [.library(name: "PlaypediaFavoritesState", type: .dynamic, targets: ["PlaypediaFavoritesState"])],
     dependencies: [
-        .package(path: "../PlaypediaDomain")
+        .package(
+            url: "https://github.com/ferdianrra/playpedia-domain.git",
+            revision: "e2d0be81278e9ba61cc58e8247d43981d63e0fea"
+        )
     ],
     targets: [
         .target(name: "PlaypediaFavoritesState", dependencies: [
-            .product(name: "PlaypediaDomain", package: "PlaypediaDomain")
+            .product(name: "PlaypediaDomain", package: "playpedia-domain")
         ])
     ]
 )

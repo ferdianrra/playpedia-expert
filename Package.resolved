@@ -10,6 +10,14 @@
       }
     },
     {
+      "identity" : "playpedia-domain",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ferdianrra/playpedia-domain.git",
+      "state" : {
+        "revision" : "e2d0be81278e9ba61cc58e8247d43981d63e0fea"
+      }
+    },
+    {
       "identity" : "swinject",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Swinject/Swinject.git",

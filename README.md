@@ -12,7 +12,7 @@ Referensi: [Testing iOS on CircleCI](https://circleci.com/docs/guides/test/testi
 
 ## Modularization
 
-Aplikasi memakai sembilan Swift Package lokal. Setiap package memiliki manifest sendiri dan menghasilkan framework dinamis yang di-link serta di-embed ke aplikasi:
+Aplikasi memakai delapan Swift Package lokal dan PlaypediaDomain dari repository GitHub. Setiap package memiliki manifest sendiri dan menghasilkan framework dinamis yang di-link serta di-embed ke aplikasi:
 
 | Modul | Tanggung jawab |
 | --- | --- |
@@ -34,10 +34,10 @@ Tetap buka `Playpedia.xcodeproj`, pilih scheme **Playpedia**, lalu **Command+R**
 
 CircleCI tetap menjalankan target PlaypediaTests melalui scheme yang sama. Setelah commit/push seluruh folder Modules dan perubahan project/manifest, pipeline akan mengambil dependency lokal dari checkout repository.
 
-PlaypediaDomain memiliki `Package.swift` sendiri di `Modules/PlaypediaDomain`, sehingga siap dipublikasikan sebagai package mandiri. Publikasi repository ditunda sesuai permintaan; link modul untuk Catatan submission baru tersedia setelah publikasi dilakukan. Begitu pula status terakhir CI perlu diperiksa pada server setelah perubahan didorong.
+PlaypediaDomain dipublikasikan sebagai [Swift Package mandiri](https://github.com/ferdianrra/playpedia-domain). Aplikasi, modul lokal, dan test menggunakan repository tersebut dengan revision `e2d0be81278e9ba61cc58e8247d43981d63e0fea` agar seluruh konsumen memakai versi yang sama. Tag rilis belum tersedia saat integrasi; pin dapat diganti ke versi semantik setelah tag dipublikasikan. Status terakhir CI perlu diperiksa pada server setelah perubahan didorong.
 
 Referensi: [Swift Package targets dan products](https://docs.swift.org/latest/documentation/packagemanagerdocs/introducingpackages/), [resource Swift Package](https://developer.apple.com/documentation/xcode/bundling-resources-with-a-swift-package).
 
 ## Membuka source modul di Xcode
 
-Buka source lewat grup `Modules` pada navigator project. Grup ini hanya menampilkan file; dependency package didaftarkan satu kali lewat project. Jika Xcode menampilkan `already opened from another project or workspace`, tutup seluruh jendela package/project dan Quit Xcode, kemudian buka kembali hanya `Playpedia.xcodeproj`. Jangan membuka manifest root dan semua package sebagai workspace terpisah bersamaan dengan aplikasi.
+Buka source lewat grup `Modules` pada navigator project. Source Domain tersedia di Package Dependencies → playpedia-domain. Grup Modules hanya menampilkan source modul lokal; dependency package didaftarkan satu kali lewat project. Jika Xcode menampilkan `already opened from another project or workspace`, tutup seluruh jendela package/project dan Quit Xcode, kemudian buka kembali hanya `Playpedia.xcodeproj`. Jangan membuka manifest root dan semua package sebagai workspace terpisah bersamaan dengan aplikasi.
